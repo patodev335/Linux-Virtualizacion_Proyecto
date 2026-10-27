@@ -40,6 +40,8 @@ Es un sistema tipo Google Drive pero autoalojado. Descargué el paquete oficial 
 
 ***sí, no me maté mucho.***
 
+Igual cuando entren al servidor por primera vez van a poder asignarle su propio usuario y contraseña. Yo recomiendo eso, total es privado.
+
 *Autor: Patricio Nahuel Monsalvo Canosa*
 
 *Fecha: 27/10/2026*

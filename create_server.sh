@@ -3,18 +3,14 @@
 echo -e "Chequeando si docker está instalado..."
 OS_NAME=$(grep -E '^NAME=' /etc/os-release | cut -d= -f2 | tr -d '"')
 
-# Convertir a mayúsculas para asegurar la comparación
 if [[ "$(echo "$OS_NAME" | tr '[:lower:]' '[:upper:]')" == "UBUNTU" ]]; then
     echo "Sistema operativo validado: Ubuntu."
     
-    # Preguntar al usuario si desea instalar Docker
     read -p "¿Quiere instalar docker? (Y/N): " RESPUESTA
     
-    # Convertir la respuesta a mayúscula para aceptar tanto 'y' como 'Y'
     if [[ "${RESPUESTA,,}" == "y" ]]; then
         echo "Ejecutando install_docker.sh..."
         
-        # Verificar si el script de instalación existe y es ejecutable
         if [[ -x "./install_docker.sh" ]]; then
             ./install_docker.sh
         else
@@ -22,10 +18,10 @@ if [[ "$(echo "$OS_NAME" | tr '[:lower:]' '[:upper:]')" == "UBUNTU" ]]; then
             exit 1
         fi
     else
-        echo "Instalación de Docker omitida por el usuario. Continuando..."
+        echo "Instalación de Docker omitida. Continuando..."
     fi
 else
-    echo "Error: Este sistema no es Ubuntu (Detectado: $OS_NAME). Cancelando instalación."
+    echo -e "\t>> Error: Este sistema no es Ubuntu (Detectado: $OS_NAME). Cancelando instalación."
     exit 1
 fi
 

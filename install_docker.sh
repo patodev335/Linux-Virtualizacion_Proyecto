@@ -1,4 +1,7 @@
 #!/bin/bash
+
+#este código lit es lit lo que estaba en la página de docker.
+
 # Add Docker's official GPG key:
 sudo apt update
 sudo apt install ca-certificates curl

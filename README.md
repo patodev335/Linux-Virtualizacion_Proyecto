@@ -16,11 +16,11 @@ El servidor puede accederse mediante la siguiente dirección IP en el navegador
 
 2. Ejecute el script 
 
-        ./create_server.sh
+        sudo ./create_server.sh
 
 3. Tras haber creado el contenedor, inicielo utilizando el script
 
-        ./start_server.sh
+        sudo ./start_server.sh
 
 
 ![Imágen de la página del servidor local](./imgs/1.png)
@@ -45,3 +45,5 @@ Igual cuando entren al servidor por primera vez van a poder asignarle su propio 
 *Autor: Patricio Nahuel Monsalvo Canosa*
 
 *Fecha: 27/10/2026*
+
+
